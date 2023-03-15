@@ -136,10 +136,10 @@ mainadminid = {self.get_main_admin_id()}
 debug = 0
 
 [shop_settings]
-name = Название магазина
-greeting = Добро пожаловать!
-refundpolicy = Текст для вкладки "Политика возврата"
-contacts = Текст для вкладки "Контакты"
+name = Store name
+greeting = Welcome!
+refundpolicy = Text for "Refund Policy" tab
+contacts = Text for the "Contacts" tab
 enableimage = 1
 enablesticker = 0
 enablephonenumber = 0
