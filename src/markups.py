@@ -316,10 +316,10 @@ def get_markup_shopSettings():
     
 def get_markup_mainSettings():
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton(text=f"Название: {settings.get_shop_name()}", callback_data="admin_changeShopName"))
-    markup.add(types.InlineKeyboardButton(text=f"Приветствие: {settings.get_shop_greeting()}", callback_data="admin_changeShopGreeting"))
-    markup.add(types.InlineKeyboardButton(text=f"Политика возврата: {settings.get_refund_policy()}", callback_data="admin_changeShopRefundPolicy"))
-    markup.add(types.InlineKeyboardButton(text=f"Контакты: {settings.get_shop_contacts()}", callback_data="admin_changeShopContacts"))
+    markup.add(types.InlineKeyboardButton(text=f"Name: {settings.get_shop_name()}", callback_data="admin_changeShopName"))
+    markup.add(types.InlineKeyboardButton(text=f"Greetings: {settings.get_shop_greeting()}", callback_data="admin_changeShopGreeting"))
+    markup.add(types.InlineKeyboardButton(text=f"Return policy: {settings.get_refund_policy()}", callback_data="admin_changeShopRefundPolicy"))
+    markup.add(types.InlineKeyboardButton(text=f"Contacts: {settings.get_shop_contacts()}", callback_data="admin_changeShopContacts"))
     markup.add(types.InlineKeyboardButton(text=tt.disable_sticker if settings.is_sticker_enabled() else tt.enable_sticker, callback_data="admin_changeEnableSticker"))
     markup.add(btnBackShopSettings)
     return markup

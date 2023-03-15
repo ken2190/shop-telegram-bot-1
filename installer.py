@@ -14,10 +14,10 @@ mainadminid = {main_admin_id}
 debug = 0
 
 [shop_settings]
-name = Название магазина
-greeting = Добро пожаловать!
-refundpolicy = Текст для вкладки "Политика возврата"
-contacts = Текст для вкладки "Контакты"
+name = Store name
+greeting = Welcome!
+refundpolicy = Text for "Refund Policy" tab
+contacts = Text for the "Contacts" tab
 enableimage = 1
 enablesticker = 0
 enablephonenumber = 0
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     clearConsole()
     if any(list(map(exists, ["config.ini", "images", "data.db"]))):
         while True:
-            confirmation = input("Вы уверены, что хотите повторно запустить процесс установки? Все данные будут утеряны! (y/N) ")
+            confirmation = input("Are you sure you want to rerun the installation process? All data will be lost! (y/N) ")
             if confirmation.lower() in ["y", "yes", "n", "no", ""]:
                 break
     else:
@@ -114,41 +114,41 @@ if __name__ == "__main__":
 
 
     if confirmation.lower() in ["y", "yes"]:
-        print("Вы можете узнать как получить токен бота, перейдя по ссылке: https://youtu.be/fyISLEvzIec")
-        token = input("Введите токен бота: ")
-        print("Вы можете получить ваш ID, написав \"/start\" боту @userinfobot")
-        main_admin_id = input("Введите ID главного администратора: ")
+        print("You can learn how to get a bot token by following the link: https://youtu.be/fyISLEvzIec")
+        token = input("Enter bot token: ")
+        print("You can get your ID by writing \"/start\" to @userinfobot")
+        main_admin_id = input("Enter the main admin ID: ")
         if main_admin_id.isalnum():
             if exists("data.db"):
                 remove("data.db")
-                print("База данных была удалена.")
+                print("The database has been deleted.")
             create_db()
-            print("База данных была создана.")
+            print("The database has been created.")
             if exists("config.ini"):
                 remove("config.ini")
-                print("Файл настроек был удален.")
+                print("Settings file has been deleted.")
             create_config(token, main_admin_id)
-            print("Файл настроек был создан.")
+            print("Settings file has been created.")
             if exists("images"):
                 for file in listdir("images"):
                     remove("images/" + file)
                 rmdir("images")
-                print("Папка \"images\" была удалена.")
+                print("The \"images\" folder has been deleted.")
             mkdir("images")
-            print("Папка \"images\" была создана.")
+            print("The \"images\" folder has been created.")
             if exists("backups"):
                 for folder in listdir("backups"):
                     for file in listdir("backups/" + folder):
                         remove(f"backups/{folder}/{file}")
                     rmdir(f"backups/{folder}")
                 rmdir("backups")
-                print("Папка \"backups\" была удалена.")
+                print("The \"backups\" folder has been deleted.")
             mkdir("backups")
-            print("Папка \"backups\" была создана.")
+            print("The folder \"backups\" has been created.")
         else:
-            print("Неверный ID главного администратора.")
+            print("Invalid main admin ID.")
     else:
-        print("Установка была отменена.")
+        print("The installation was canceled.")
 
 
-    input("Нажмите ENTER, чтобы продолжить...")
+    input("Press ENTER to continue...")

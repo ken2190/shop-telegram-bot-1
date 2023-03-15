@@ -1,70 +1,70 @@
-# ⚠️ Эта версия бота больше не обновляется!
-Сейчас я переписываю бота, за обновлениями следите на ветке rewrite :)
+# ⚠️ This version of the bot is no longer updated!
+Now I'm rewriting the bot, follow the updates on the rewrite branch :)
 <br>
 
-## 🪲 В случае возникновения ошибок открывайте тикет во вкладке Issues :)
+## 🪲 In case of errors, open a ticket in the Issues tab :)
 
-# Навигация
+# Navigation
 
-- [Навигация](#навигация)
-- [Зачем нужен этот бот?](#зачем-нужен-этот-бот)
-- [Установка](#установка)
-     - [Python](#python)
-     - [Установка необходимых Python-пакетов](#установка-необходимых-python-пакетов)
-     - [Запуск установщика](#запуск-установщика)
-     - [Запуск бота](#запуск-бота)
-          - [Запуск с помощью скрипта](#запуск-с-помощью-скрипта)
-               - [Linux](#linux)
-               - [Macos](#macos)
-          - [Запуск вручную](#запуск-вручную)
-- [Режим отладки](#режим-отладки)
+- [Navigation](#navigation)
+- [Why do we need this bot?](#why-do we-need-this-bot)
+- [Installation](#installation)
+      -[Python](#python)
+      - [Install required Python packages](#install required python packages)
+      - [Run installer](#run-installer)
+      - [Launch bot](#start-bot)
+           - [Run with script](#run-with-script)
+                - [Linux](#linux)
+                - [Macos](#macos)
+           - [Start manually](#start-manually)
+- [Debug mode](#debug-mode)
 
-# Зачем нужен этот бот?
+# Why is this bot needed?
 
-Зачастую люди, желающие открыть маленький интернет-бизнес, делают это с помощью профиля в социальных сетях, что требует вручную обрабатывать каждую заявку. Этот бот позволит каждому быстро открыть автоматизированный магазин на базе телеграм бота, что значительно уменьшит время обработки заказов.
+Often, people who want to start a small online business do so through a social media profile, which requires them to manually process each application. This bot will allow everyone to quickly open an automated store based on a telegram bot, which will significantly reduce the order processing time.
 
 ![overview](DOCS/bot_overview.gif)
 
-# Установка
+# Installation
 
-## Python
+##Python
 
-Для работы бота необходимо установить [Python версии 3.10 и выше](https://www.python.org/downloads/).
+For the bot to work, [Python version 3.10 and higher](https://www.python.org/downloads/) must be installed.
 
-## Установка необходимых Python-пакетов
+## Install required Python packages
 
-    python3 -m pip install -r requirements.txt
+     python3 -m pip install -r requirements.txt
 
-## Запуск установщика
+## Run the installer
 
-Перед запуском установщика требуется [создать токен](https://youtu.be/fyISLEvzIec) для телеграм бота и [получить ваш ID](https://badcode.ru/kak-v-telegram-uznat-svoi-id/).
+Before launching the installer, you need to [create a token](https://youtu.be/fyISLEvzIec) for the telegram bot and [get your ID](https://badcode.ru/kak-v-telegram-uznat-svoi-id/) .
 
-Установщик запускается с помощью команды: 
+The installer is launched with the command:
 
-    python3 installer.py
+     python3 installer.py
 
-## Запуск бота
+## Run the bot
 
-### Запуск с помощью скрипта
+### Launch via script
 
 #### Linux/MacOS
 
-    $ chmod +x start.sh
-    $ ./start.sh
+     $ chmod +x start.sh
+     $ ./start.sh
 
 #### Windows
 
-    $ start.cmd
+     $start.cmd
 
-### Запуск вручную
+### Start manually
 
-    python3 main.py
+     python3 main.py
 
-# Режим отладки
+# Debug mode
 
-Режим отладки можно активировать во вкладке "Основные настройки". 
-После активации в терминале начнут отображаться все сообщения и вызовы в формате:
+Debug mode can be activated in the "General Settings" tab.
+After activation, the terminal will display all messages and calls in the format:
 
-    DEBUG: <MESSAGE/CALL> [<user_id>] <Сообщение/вызов>
+     DEBUG: <MESSAGE/CALL> [<user_id>] <Message/Call>
 
-*Пример: `DEBUG CALL [462741] admin_itemManagement`*
+*Example: `DEBUG CALL [462741] admin_itemManagement`*

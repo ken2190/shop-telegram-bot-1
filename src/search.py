@@ -4,7 +4,7 @@ import item as itm
 
 m = pymorphy2.MorphAnalyzer()
 
-excluded_words = ["без", "в", "для", "до", "за", "из", "к", "под", "а", "о", "над", "на", "о", "об", "от", "перед", "по", "под", "при", "про", "с", "у"]
+excluded_words = ["without", "in", "for", "before", "for", "from", "to", "under", "a", "about", "above", "on", " o", "about", "from", "before", "to", "under", "at", "about", "from", "y"]
 
 def get_normal_forms(word):
     return set(p.normal_form for p in m.parse(word))
